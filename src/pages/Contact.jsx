@@ -1,21 +1,98 @@
-export default function Contact() {
+import { useState } from 'react';
+import './style.css';
+
+// Here we import a helper function that will check if the email is valid
+import { validateEmail, checkName, checkMessage } from './utils/helpers';
+
+function Contact() {
+  // Create state variables for the fields in the form
+  // We are also setting their initial values to an empty string
+  const [email, setEmail] = useState('');
+  const [name, setName] = useState('');
+  const [message, setMessage] = useState('');
+
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleInputChange = (e) => {
+    // Getting the value and name of the input which triggered the change
+    const { target } = e;
+    const inputType = target.name;
+    const inputValue = target.value;
+
+    if (inputType === 'email') {
+      setEmail(inputValue);
+    } else if (inputType === 'name') {
+      setName(inputValue);
+    } else {
+      setMessage(inputValue);
+    }
+  };
+
+  const handleFormSubmit = (e) => {
+    // Preventing the default behavior of the form submit (which is to refresh the page)
+    e.preventDefault();
+
+    // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
+    if (!validateEmail(email)) {
+      setErrorMessage('Email is invalid');
+      return;
+    }
+    if (!checkName(name)) {
+        setErrorMessage(
+          `Please enter a name with a range of 2 to 50 characters.`
+        );
+        return;
+      }
+    if (!checkMessage(message)) {
+      setErrorMessage(
+        `Please enter a message with a range of 2 to 280 characters.`
+      );
+      return;
+    }
+
+    setEmail('');
+    setName('');
+    setMessage('');
+    alert(`Message Submitted`);
+  };
+
   return (
-    <div>
-      <h1>Contact Page</h1>
-      {/* ADD FORM HERE */}
-      <p>
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-        efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-        mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-        posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-        faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-        ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-        dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-        rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-      </p>
+    <div className="container text-center">
+      <h1>Contact</h1>
+      <form className="form" onSubmit={handleFormSubmit}>
+      <input
+          value={email}
+          name="email"
+          onChange={handleInputChange}
+          type="email"
+          placeholder="email"
+        />
+        <input
+          value={name}
+          name="name"
+          onChange={handleInputChange}
+          type="text"
+          placeholder="name"
+        />
+        <input
+          value={message}
+          name="message"
+          onChange={handleInputChange}
+          type="text"
+          placeholder="Enter a message"
+        />
+        <button type="submit">
+          Submit
+        </button>
+      </form>
+
+      {errorMessage && (
+        <div>
+          <p className="error-text">{errorMessage}</p>
+        </div>
+      )}
     </div>
   );
 }
+
+export default Contact;
