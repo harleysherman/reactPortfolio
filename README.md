@@ -28,6 +28,11 @@ Projects:
     - GitHub: https://github.com/harleysherman/weatherAPI
     - IO: https://harleysherman.github.io/weatherAPI/
 
-6. NoteTaker:
-    - GitHub: https://github.com/harleysherman/noteTaker
-    - Heroku: https://calm-lowlands-81368-2dce2ee0670a.herokuapp.com/
+6. WorkDayStarter:
+    - GitHub: https://github.com/harleysherman/workDayStarter
+    - IO: https://harleysherman.github.io/workDayStarter/
+
+Footer Information: 
+- LinkedIn: https://www.linkedin.com/in/harley-sherman-a9680b18b/
+- GitHub: https://github.com/harleysherman
+- Other portfolio: https://www.harleysherman.com/
