@@ -20,7 +20,7 @@ Projects:
     - GitHub: https://github.com/harleysherman/techBlog
     - Heroku: https://mighty-shelf-93751-8304233a0599.herokuapp.com
 
-4. SocialNetwork API:
+4. SocialNetworkAPI:
     - GitHub: https://github.com/harleysherman/socialNetworkAPI
     - Video Link: https://drive.google.com/file/d/17T2H6v49b6ak8QSqHOo-EZ_3_c5uuGCR/view
 
