@@ -12,7 +12,6 @@ import Footer from './pages/Footer/Footer';
 function App() {
   return (
     <>
-    {/* add HEADER */}
       <Nav />
       <main className="mx-3">
         <About />

@@ -1,10 +1,10 @@
 import Card from "./Card";
-import furCompanion from "../Assets/furCompanion.png";
-import employeeTracker from "../Assets/employeeTracker.gif";
-import techBlog from "../Assets/techBlog.png";
-import socialNetworkAPI from "../Assets/socialNetworkAPI.gif";
-import weatherAPI from "../Assets/weatherAPI.png";
-import workDayStarter from "../Assets/workDayStarter.png";
+import furCompanion from '../Assets/furCompanion.png';
+import employeeTracker from '../Assets/employeeTracker.gif';
+import techBlog from '../Assets/techBlog.png';
+import socialNetworkAPI from '../Assets/socialNetworkAPI.gif';
+import weatherAPI from '../Assets/weatherAPI.png';
+import workDayStarter from '../Assets/workDayStarter.png';
 
 function Portfolio() {
   const project = [
