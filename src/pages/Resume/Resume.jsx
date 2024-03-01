@@ -1,8 +1,10 @@
-export default function Home() {
+import PDF from "../../Assets/HarleyShermanResume.pdf";
+
+export default function Resume() {
   return (
     <div>
       <h1>Resume</h1>
-      {/* <link href="../Assets/HarleyShermanResume.pdf">Resume</link> */}
+      <a href={ PDF } target="_blank">Resume</a>
       <p>
         Front End Skills:
         <ul>

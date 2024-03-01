@@ -1,4 +1,5 @@
 import { useRouteError } from 'react-router-dom';
+import CatPic from "../../Assets/CatPic.jpg"
 
 export default function ErrorPage() {
   const error = useRouteError();
@@ -7,10 +8,11 @@ export default function ErrorPage() {
   return (
     <div id="error-page">
       <h1>Oops!</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
+      <p>I am not sure how you got here. But here is a cat.</p>
       <p>
         <i>{error.statusText || error.message}</i>
       </p>
+      <img src={CatPic} alt="Random Cat Pic"></img>
     </div>
   );
 }
