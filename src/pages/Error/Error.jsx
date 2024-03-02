@@ -1,5 +1,5 @@
 import { useRouteError } from 'react-router-dom';
-import CatPic from "../../Assets/CatPic.jpg"
+import CatPic from "../../Assets/CatPic.jpeg";
 
 export default function ErrorPage() {
   const error = useRouteError();
@@ -12,7 +12,7 @@ export default function ErrorPage() {
       <p>
         <i>{error.statusText || error.message}</i>
       </p>
-      <img src={CatPic} alt="Random Cat Pic"></img>
+      <img src={ CatPic } alt="Random Cat Pic"></img>
     </div>
   );
 }
