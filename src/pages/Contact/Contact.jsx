@@ -65,14 +65,14 @@ function Contact() {
           name="email"
           onChange={handleInputChange}
           type="email"
-          placeholder="email"
+          placeholder="Email"
         />
         <input
           value={name}
           name="name"
           onChange={handleInputChange}
           type="text"
-          placeholder="name"
+          placeholder="Name"
         />
         <input
           value={message}

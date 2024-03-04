@@ -5,7 +5,7 @@ export default function Resume() {
   return (
     <div>
       <h2 className="m-2">Resume</h2>
-      <p className="p-2">
+      <section className="skills p-2">
         Front End Skills:
         <ul className="p-6">
           <li>React</li>
@@ -15,9 +15,9 @@ export default function Resume() {
           <li>Express</li>
           <li>HTML</li>
         </ul>
-      </p>
+      </section>
 
-      <p className="p-2">
+      <section className="p-2">
         Back End Skills:
         <ul className="p-6">
           <li>MySQL</li>
@@ -27,7 +27,7 @@ export default function Resume() {
           <li>Sequelize</li>
           <li>API</li>
         </ul>
-      </p>
+      </section>
       <a className="m-2" href={ PDF } target="_blank">Resume Link</a>
     </div>
   );

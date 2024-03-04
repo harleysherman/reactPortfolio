@@ -8,6 +8,10 @@
     margin-top: 5px;
     margin-bottom: 5px;
     width: 100%;
+    background-color: #608c5461;
+    color: #d9e6d6 !important;
+    margin-bottom: 10px;
+    border-width: 0;
   }
 
   .nav-link-custom {
