@@ -1,0 +1,13 @@
+.projectLi {
+    list-style: none;
+  }
+  .card-title {
+    color: #457355;
+  }
+  .card-body {
+    background-color: #b8c4b3;
+  }
+  
+  .card-img-top {
+    object-fit: fill;
+  }

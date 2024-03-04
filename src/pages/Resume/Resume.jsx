@@ -1,13 +1,13 @@
 import PDF from "../../Assets/HarleyShermanResume.pdf";
+import './Resume.css';
 
 export default function Resume() {
   return (
     <div>
-      <h1>Resume</h1>
-      <a href={ PDF } target="_blank">Resume</a>
-      <p>
+      <h2 className="m-2">Resume</h2>
+      <p className="p-2">
         Front End Skills:
-        <ul>
+        <ul className="p-6">
           <li>React</li>
           <li>CSS</li>
           <li>Handlebars</li>
@@ -17,9 +17,9 @@ export default function Resume() {
         </ul>
       </p>
 
-      <p>
+      <p className="p-2">
         Back End Skills:
-        <ul>
+        <ul className="p-6">
           <li>MySQL</li>
           <li>MongoDB & Mongoose</li>
           <li>Jest</li>
@@ -28,6 +28,7 @@ export default function Resume() {
           <li>API</li>
         </ul>
       </p>
+      <a className="m-2" href={ PDF } target="_blank">Resume Link</a>
     </div>
   );
 }

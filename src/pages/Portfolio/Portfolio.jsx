@@ -5,6 +5,7 @@ import techBlog from '../../Assets/techBlog.png';
 // import socialNetworkAPI from '../../Assets/socialNetworkAPI.gif';
 import weatherAPI from '../../Assets/weatherAPI.png';
 import workDayStarter from '../../Assets/workDayStarter.png';
+import './Portfolio.css';
 
 function Portfolio() {
   const project = [
@@ -55,13 +56,13 @@ function Portfolio() {
   ];
 
   return (
-    <>
+    <section className="row">
       {project.map((element) => (
-        <li  key={element.id}>
+        <li className="projectLi col-md-6 col-sm-12 p-2" key={element.id}>
           <Card project={element} />
         </li>
       ))}
-    </>
+    </section>
   );
 }
 

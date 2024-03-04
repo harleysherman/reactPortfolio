@@ -1,13 +1,13 @@
 :root {
   /* OVERALL STYLES FOR ENTIRE APP */
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Barlow Condensed", sans-serif;
   line-height: 1.5;
   font-weight: 400;
   /*  add FONTS here */
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #608C54;
   /* add COLORS here */
 
   font-synthesis: none;
@@ -17,47 +17,78 @@
 }
 
 a {
+  font-size: larger;
   font-weight: 500;
-  color: #646cff;
+  color: #457355;
   text-decoration: inherit;
 }
+
 a:hover {
-  color: #535bf2;
+  color: #3C8C16;
 }
 
 body {
   margin: 0;
-  display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #cddcce;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 3em;
   line-height: 1.1;
+  font-weight: 600;
+  color: #1A402A;
 }
 
+h2 {
+  font-size: 2em;
+  line-height: 1.1;
+  font-weight: 500;
+  color: #1A402A;
+}
+
+h5 {
+  font-size: 2em;
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+p {
+  font-size: 1.5em;
+  line-height: 1.1;
+  font-weight: 400;
+  color: #1A402A;
+}
+
+ul li {
+  font-size: 1em !important;
+  font-weight: 300 !important;
+  color: #1A402A;
+}
 button {
   border-radius: 8px;
   border: 1px solid transparent;
+  margin-top: 1em;;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: #608254;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #3C8C16;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
+
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -68,7 +99,7 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
 
 /* Global Styles */
 /* Adding barlow font and their weights */
@@ -179,5 +210,3 @@ button:focus-visible {
   font-weight: 900;
   font-style: italic;
 }
-
-/* ADD GLOBAL COLORS */

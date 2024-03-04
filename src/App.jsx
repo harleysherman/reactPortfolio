@@ -1,12 +1,13 @@
-import Nav from './pages/Nav/Nav';
-import { Outlet } from 'react-router-dom';
-import Footer from './pages/Footer/Footer';
+import Nav from "./pages/Nav/Nav";
+import { Outlet } from "react-router-dom";
+import Footer from "./pages/Footer/Footer";
 
 function App() {
   return (
     <>
       <Nav />
-      <main className="mx-3">
+      <h1 className="d-flex justify-content-end m-3">Harley Sherman</h1>
+      <main className="m-3">
         <Outlet />
       </main>
       <Footer />
@@ -15,4 +16,3 @@ function App() {
 }
 
 export default App;
-
