@@ -32,7 +32,7 @@ function Nav() {
           About
         </Link>
       </li>
-      <li className="nav-item">
+      {/* <li className="nav-item">
         <Link
           to="/Portfolio"
           className={
@@ -43,6 +43,29 @@ function Nav() {
         >
           Portfolio
         </Link>
+      </li> */}
+      <li className="portfolioDropdown nav-item dropdown nav-link-custom">
+        <a
+          className="nav-link dropdown-toggle nav-link-custom"
+          data-bs-toggle="dropdown"
+          href="/Portfolio"
+          role="button"
+          aria-expanded="false"
+        >
+          Portfolio
+        </a>
+        <ul className="dropdown-menu">
+          <li>
+            <a className="dropdown-item" href="/Portfolio">
+              Development
+            </a>
+          </li>
+          <li>
+            <a className="dropdown-item" href="http://harleysherman.com">
+              Design
+            </a>
+          </li>
+        </ul>
       </li>
       <li className="nav-item">
         <Link
