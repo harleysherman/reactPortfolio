@@ -4,7 +4,7 @@ import './Resume.css';
 export default function Resume() {
   return (
     <div>
-      <h2 className="m-2">Resume</h2>
+      <h2 className="mt-4">Resume</h2>
       <section className="skills p-2">
         Front End Skills:
         <ul className="p-6">
@@ -17,7 +17,7 @@ export default function Resume() {
         </ul>
       </section>
 
-      <section className="p-2">
+      <section className="skills p-2">
         Back End Skills:
         <ul className="p-6">
           <li>MySQL</li>
@@ -28,7 +28,7 @@ export default function Resume() {
           <li>API</li>
         </ul>
       </section>
-      <a className="m-2" href={ PDF } target="_blank">Resume Link</a>
+      <a className="skills m-2" href={ PDF } target="_blank">Resume Link</a>
     </div>
   );
 }

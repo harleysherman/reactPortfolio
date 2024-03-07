@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section className="row">
       <img className="imageDev col-md-4 col-sm-12" src={DevPhoto} alt="Photo of Harley"></img>
-      <div className="col-md-8 col-sm-12 p-2">
+      <div className="col-md-8 col-sm-12 p-4">
         <h2>About Me</h2>
         <p>
           Full Stack Web Developer with a background in graphic design and a

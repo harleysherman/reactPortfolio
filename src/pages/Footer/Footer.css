@@ -5,3 +5,9 @@
     width: 100%; */
     margin-top: auto;
 }
+
+.copyright {
+    font-size: larger;
+    color: #1A402A;
+    font-weight: 500;
+}

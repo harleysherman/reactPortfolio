@@ -1,0 +1,14 @@
+.h1 {
+    font-size: 7em;
+    font-weight: 800;
+}
+
+.designPortfolio, .devPortfolio {
+    font-size: 5em;
+    z-index: 100;
+}
+
+/* .imageHome {
+    width: auto !important;
+    height: auto;
+} */
