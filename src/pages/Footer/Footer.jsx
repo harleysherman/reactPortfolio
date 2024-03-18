@@ -6,10 +6,7 @@ export default function Footer() {
     <div className="footer d-flex justify-content-center">
       <a
         href="https://www.linkedin.com/in/harley-sherman-a9680b18b/"
-        className="social-icon si-rounded si-small si-linkedin m-4"
-      >
-        <i className="icon-linkedin"></i>
-      </a>
+        className="fa fa-linkedin"></a>
       {/* <a
         className="m-4"
         href={"https://www.linkedin.com/in/harley-sherman-a9680b18b/"}
