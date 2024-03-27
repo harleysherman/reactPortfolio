@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './Contact.css';
+import emailjs from 'emailjs-com';
 
 // Here we import a helper function that will check if the email is valid
 import { validateEmail, checkName, checkMessage } from '../utils/helpers';
@@ -50,6 +51,14 @@ function Contact() {
       return;
     }
 
+    //emailjs
+    emailjs.sendForm('techPortfolio', 'YOUR_TEMPLATE_ID', e.target, 'tech@harleyflores.com')
+    .then((result) => {
+        console.log(result.text);
+    }, (error) => {
+        console.log(error.text);
+    });
+
     setEmail('');
     setName('');
     setMessage('');
@@ -58,7 +67,7 @@ function Contact() {
 
   return (
     <div className="container text-center">
-      <h1 className="m-2">Contact</h1>
+      <h2 className="m-2">Contact</h2>
       <form className="form" onSubmit={handleFormSubmit}>
       <input
           value={email}

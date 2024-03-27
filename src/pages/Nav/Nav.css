@@ -1,12 +1,18 @@
 .nav-link-custom {
-  color: #1a402a !important;
+  color: #376d3c !important;
   letter-spacing: 0.25em;
 }
 
 .dropdown-item, .a {
-  --bs-nav-link-color: #457355 !important;
-  --bs-nav-link-hover-color: #3c8c16 !important;
+  --bs-nav-link-color: #de857d !important;
+  --bs-nav-link-hover-color: #61abae !important;
   letter-spacing: 0.25em;
-  background-color: #cddcce;
-  --bs-dropdown-link-active-bg: #3c8c16 !important;
+  background-color: #ffffff;
+  --bs-dropdown-link-active-bg: #917697 !important;
+}
+
+.krub-bold {
+  font-family: "Krub", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }

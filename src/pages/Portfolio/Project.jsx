@@ -14,7 +14,7 @@ function Project() {
   return (
     <>
       {clickedProj.map((project) => (
-        <section className="row" key={project.id}>
+        <section className="row m-4" key={project.id}>
           <img
             className="projectImage col-md-5 col-sm-12"
             src={project.imageURL}

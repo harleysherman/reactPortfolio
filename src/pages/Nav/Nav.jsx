@@ -8,7 +8,7 @@ function Nav() {
 
   return (
     <ul className="nav nav-tabs">
-      <li className="nav-item">
+      <li className="nav-item krub-bold">
         <Link
           to="/"
           className={
@@ -20,7 +20,7 @@ function Nav() {
           Home
         </Link>
       </li>
-      <li className="nav-item">
+      <li className="nav-item krub-bold">
         <Link
           to="/About"
           className={
@@ -44,7 +44,7 @@ function Nav() {
           Portfolio
         </Link>
       </li> */}
-      <li className="portfolioDropdown nav-item dropdown nav-link-custom">
+      <li className="krub-bold portfolioDropdown nav-item dropdown nav-link-custom">
         <a
           className="nav-link dropdown-toggle nav-link-custom"
           data-bs-toggle="dropdown"
@@ -67,7 +67,7 @@ function Nav() {
           </li>
         </ul>
       </li>
-      <li className="nav-item">
+      <li className="nav-item krub-bold">
         <Link
           to="/Resume"
           className={
@@ -79,7 +79,7 @@ function Nav() {
           Resume
         </Link>
       </li>
-      <li className="nav-item">
+      <li className="nav-item krub-bold">
         <Link
           to="/Contact"
           className={
@@ -91,7 +91,7 @@ function Nav() {
           Contact
         </Link>
       </li>
-      <li className="nav-item">
+      <li className="nav-item krub-bold">
         <Link
           to="/Blog"
           className={

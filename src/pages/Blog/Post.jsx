@@ -9,7 +9,7 @@ export default function GetPost() {
   return (
     <>
       <h2>{selectedPost.title}</h2>
-      <h4>{selectedPost.dateCreated}</h4>
+      <h5>{selectedPost.dateCreated}</h5>
       <p>{selectedPost.paragraph}</p>
     </>
   );

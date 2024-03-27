@@ -4,22 +4,26 @@ import "./Home.css";
 // is homepage
 export default function Home() {
   return (
-    <section className="row d-flex justify-content-center">
-      <div className="col-md-12 col-sm-12 p-4">
+    <section className="row d-flex">
+      <section className="nameTitle mt-5">
+        <h1 className="kanit-black d-flex justify-content-center m-1">
+          Harley E.S. Flores
+        </h1>
+      </section>
+      <div className="d-flex justify-content-center col-md-12 col-sm-12 mb-5">
         <a
-          className="designPortfolio m-1"
+          className="designPortfolio"
           href={"http://harleysherman.com"}
           target="_blank"
         >
-          Design &
+          {"<-- "}Designer{" "}
         </a>
         <a
-          className="devPortfolio m-2"
+          className="devPortfolio"
           href={"http://localhost:3000/Portfolio"}
           target="_blank"
         >
-          {" "}
-          Development
+          + Developer{" -->"}
         </a>
       </div>
       <img

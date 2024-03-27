@@ -1,14 +1,18 @@
 .h1 {
-    font-size: 7em;
-    font-weight: 800;
+  font-size: 7em;
 }
 
-.designPortfolio, .devPortfolio {
-    font-size: 5em;
-    z-index: 100;
+.designPortfolio {
+  font-size: 1.2em !important;
+  letter-spacing: 0.25em;
+}
+
+.devPortfolio {
+  font-size: 1.2em !important;
+  letter-spacing: 0.25em;
 }
 
 .imageHome {
-    width: auto !important;
-    height: auto;
+  width: auto !important;
+  height: auto;
 }

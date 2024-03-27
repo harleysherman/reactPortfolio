@@ -6,11 +6,8 @@ function App() {
   return (
     <>
       <Nav />
-      <section className="nameTitle p-3">
-        <h1 className="d-flex justify-content-end m-3">Harley E.S. Flores</h1>
-      </section>
 
-      <main className="m-3">
+      <main className="appCSS">
         <Outlet />
       </main>
 

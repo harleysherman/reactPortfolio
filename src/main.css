@@ -10,14 +10,12 @@ html, body, #root {
 
 :root {
   /* OVERALL STYLES FOR ENTIRE APP */
-  font-family: "Barlow Condensed", sans-serif;
   line-height: 1.5;
   font-weight: 400;
   /*  add FONTS here */
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  /* background-color: #608C54; */
+  color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -28,13 +26,13 @@ html, body, #root {
 a {
   font-size: larger;
   font-weight: 500;
-  color: #457355;
+  color: #376d3c;
   text-decoration: inherit;
-  letter-spacing: 1px;
+  letter-spacing: 5px;
 }
 
 a:hover {
-  color: #3C8C16;
+  color: #de587d;
 }
 
 body {
@@ -42,49 +40,50 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #cddcce;
+  /* background-color: #cddcce; */
 }
 
 h1 {
   font-size: 3em;
   line-height: 1.1;
   font-weight: 600;
-  color: #1A402A;
+  color: #376d3c;
   letter-spacing: 0.10em;
 }
 
-.nameTitle {
-  background-color: #3b8c1665;
-}
-
 h2 {
+  font-family: "Krub", sans-serif;
+  font-weight: 800;
   font-size: 2.5em;
   line-height: 1.1;
-  font-weight: 500;
-  color: #1A402A;
+  color: #376d3c;
   letter-spacing: 2px;
 }
 
 h5 {
-  font-size: 2em;
+  font-size: 1.5em;
   line-height: 1.1;
+  font-family: "Krub", sans-serif;
   font-weight: 400;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 p {
+  font-family: "Krub", sans-serif;
+  font-weight: 500;
   font-size: 1.2em;
   line-height: 1.5;
-  font-weight: 400;
-  color: #1A402A;
+  color: #61abae;
   letter-spacing: 2px;
 }
 
 ul li {
   font-size: 1em !important;
+  font-family: "Krub", sans-serif;
   font-weight: 500 !important;
-  color: #1A402A;
+  color: #61abae;
 }
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -92,18 +91,20 @@ button {
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #608254;
+  background-color: #917697;
   cursor: pointer;
   transition: border-color 0.25s;
+  font-family: "Krub", sans-serif;
+  font-weight: 500;
 }
+
 button:hover {
-  border-color: #3C8C16;
+  background-color: #de587d;
 }
 
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 4px auto #ECCA42;
 }
 
 
@@ -122,110 +123,76 @@ button:focus-visible {
 
 /* Global Styles */
 /* Adding barlow font and their weights */
-.barlow-condensed-thin {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.barlow-condensed-extralight {
-  font-family: "Barlow Condensed", sans-serif;
+.krub-extralight {
+  font-family: "Krub", sans-serif;
   font-weight: 200;
   font-style: normal;
 }
 
-.barlow-condensed-light {
-  font-family: "Barlow Condensed", sans-serif;
+.krub-light {
+  font-family: "Krub", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
 
-.barlow-condensed-regular {
-  font-family: "Barlow Condensed", sans-serif;
+.krub-regular {
+  font-family: "Krub", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-.barlow-condensed-medium {
-  font-family: "Barlow Condensed", sans-serif;
+.krub-medium {
+  font-family: "Krub", sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
-.barlow-condensed-semibold {
-  font-family: "Barlow Condensed", sans-serif;
+.krub-semibold {
+  font-family: "Krub", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
 
-.barlow-condensed-bold {
-  font-family: "Barlow Condensed", sans-serif;
+.krub-bold {
+  font-family: "Krub", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
-.barlow-condensed-extrabold {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.barlow-condensed-black {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.barlow-condensed-thin-italic {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.barlow-condensed-extralight-italic {
-  font-family: "Barlow Condensed", sans-serif;
+.krub-extralight-italic {
+  font-family: "Krub", sans-serif;
   font-weight: 200;
   font-style: italic;
 }
 
-.barlow-condensed-light-italic {
-  font-family: "Barlow Condensed", sans-serif;
+.krub-light-italic {
+  font-family: "Krub", sans-serif;
   font-weight: 300;
   font-style: italic;
 }
 
-.barlow-condensed-regular-italic {
-  font-family: "Barlow Condensed", sans-serif;
+.krub-regular-italic {
+  font-family: "Krub", sans-serif;
   font-weight: 400;
   font-style: italic;
 }
 
-.barlow-condensed-medium-italic {
-  font-family: "Barlow Condensed", sans-serif;
+.krub-medium-italic {
+  font-family: "Krub", sans-serif;
   font-weight: 500;
   font-style: italic;
 }
 
-.barlow-condensed-semibold-italic {
-  font-family: "Barlow Condensed", sans-serif;
+.krub-semibold-italic {
+  font-family: "Krub", sans-serif;
   font-weight: 600;
   font-style: italic;
 }
 
-.barlow-condensed-bold-italic {
-  font-family: "Barlow Condensed", sans-serif;
+.krub-bold-italic {
+  font-family: "Krub", sans-serif;
   font-weight: 700;
   font-style: italic;
 }
 
-.barlow-condensed-extrabold-italic {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 800;
-  font-style: italic;
-}
-  
-.barlow-condensed-black-italic {
-  font-family: "Barlow Condensed", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-}
+

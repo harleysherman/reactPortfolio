@@ -1,18 +1,22 @@
 .footer {
-    background-color: #608c5447;
-    /* position: absolute;
-    bottom: 0;
-    width: 100%; */
     margin-top: auto;
-}
-
-.copyright {
-    font-size: larger;
-    color: #1A402A;
-    font-weight: 500;
 }
 
 .fa-linkedin {
     margin-top: 0.5em;
     font-size: 50px;
+}
+.fa-github {
+    margin-top: 0.5em;
+    font-size: 50px;
+}
+
+.copyright {
+    font-family: "Krub", sans-serif;
+    font-weight: 500;
+    color: #376d3c;
+}
+
+.footerIcon {
+    height: 30%;
 }

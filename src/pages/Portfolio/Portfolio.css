@@ -3,12 +3,18 @@
   }
 
   .card-title {
-    color: #1A402A !important;
+    color: #ecca42 !important;
     padding: 1em;
   }
   .card-body {
-    background-color: #b8c4b3;
+    background-color: #376d3c;
     letter-spacing: 3px;
+  }
+  
+  .krub-medium {
+    font-family: "Krub", sans-serif;
+    font-weight: 500;
+    font-style: normal;
   }
   
   /* .card-link {
@@ -108,5 +114,14 @@
   }
 
   .projectImage {
-    width: 85%;
+    max-width: 75%;
+  }
+
+  .portfolio {
+    font-family: "Krub", sans-serif;
+    font-weight: 800;
+    font-size: 2.5em;
+    line-height: 1.1;
+    color: #376d3c;
+    letter-spacing: 2px;
   }
