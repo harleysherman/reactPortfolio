@@ -13,6 +13,6 @@
 }
 
 .imageHome {
-  width: auto !important;
-  height: auto;
+  width: 100%;
+  height: 100%;
 }

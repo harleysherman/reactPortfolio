@@ -1,4 +1,4 @@
-import PDF from "../../Assets/HarleyShermanResume.pdf";
+import PDF from "../../Assets/HarleyFloresResume.pdf";
 import "./Resume.css";
 import sideIcon from "../../Assets/sideIcon.png";
 

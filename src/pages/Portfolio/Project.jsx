@@ -21,15 +21,15 @@ function Project() {
             alt="Project Image"
           ></img>
           <section className="col">
-            <h2 className="col-md-3 col-sm-12">{project.name}</h2>
-            <h4 className="col-md-3 col-sm-12">{project.category}</h4>
+            <h2 className="col-md-12 col-sm-12">{project.name}</h2>
+            <h4 className="col-md-12 col-sm-12">{project.category}</h4>
             <a className="col-md-2 col-sm-12" href={project.deployedURL}>
               Deployed
             </a>
-            <a className="col-md-2 col-sm-12" href={project.githubURL}>
+            <a className="col-md-12 col-sm-12 m-2" href={project.githubURL}>
               GitHub
             </a>
-            <p className="col-md-2 col-sm-12">{project.description}</p>
+            <p className="col-md-12 col-sm-12">{project.description}</p>
           </section>
         </section>
       ))}

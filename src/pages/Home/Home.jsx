@@ -27,7 +27,7 @@ export default function Home() {
         </a>
       </div>
       <img
-        className="imageHome justify-align-center col-md-12 col-sm-12"
+        className="imageHome justify-align-center col-md-12"
         src={HomePhoto}
         alt="Photo of Generative Pattern"
       ></img>
