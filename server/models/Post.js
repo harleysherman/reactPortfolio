@@ -1,9 +1,8 @@
 /* eslint-disable no-undef */
 const { Schema, model } = require("mongoose");
-const commentSchema = require("./Comment");
 
-const achievementSchema = new Schema({
-  titleAchievement: {
+const postSchema = new Schema({
+  titlePost: {
     type: String,
     required: true,
     trim: true,
@@ -31,13 +30,12 @@ const achievementSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "User",
   },
-  comments: [commentSchema],
   url: {
     type: String,
     trim: true,
   }
 });
 
-const Achievement = model("Achievement", achievementSchema);
+const Post = model("Post", postSchema);
 
-module.exports = Achievement;
+module.exports = Post;

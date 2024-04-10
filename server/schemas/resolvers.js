@@ -1,32 +1,26 @@
-const { User, Achievement, Community, Comment } = require("../models");
+/* eslint-disable no-undef */
+const { User, Post} = require("../models");
 const { signToken, AuthenticationError } = require("../utils/auth");
 
 const resolvers = {
   Query: {
     users: async () => {
-      return await User.find({}).populate("achievements");
+      return await User.find({}).populate("posts");
       // community?
     },
-    communities: async () => {
-      return await Community.find({}).populate("users");
-      // populate achievements?
-    },
-    achievements: async () => {
+    posts: async () => {
       return await Achievement.find({}).populate("comments").populate("user");
     },
-    achievement: async ( parent, { achievementId }) => {
-      return await Achievement.findOne({ _id: achievementId }).populate("comments").populate("user");
+    post: async ( parent, { postId }) => {
+      return await Achievement.findOne({ _id: postId }).populate("user");
     },
-    // comments: async () => {
-    //   return await Comment.find({});
-    // },
     user: async (parent, { username }) => {
-      return await User.findOne({ username }).populate("achievements");
+      return await User.findOne({ username }).populate("posts");
     },
     me: async (parent, args, context) => {
       console.log(context);
       if (context.user) {
-        return await User.findOne({ _id: context.user._id }).populate("achievements");
+        return await User.findOne({ _id: context.user._id }).populate("posts");
       }
       throw AuthenticationError;
     },
@@ -57,111 +51,40 @@ const resolvers = {
 
       return { token, user };
     },
-    addCommunity: async (parent, { category }, context) => {
-      if (!context.user) {
-        const addedCommunity = await Community.create({
-          category,
-        });
-
-        return addedCommunity;
-      }
-      throw AuthenticationError;
-    },
-    addAchievement: async (_, { titleAchievement, body }, context) => {
-      // if (context.user) {
-        const addedAchievement = await Achievement.create({
-          titleAchievement,
+    addPost: async (_, { titlePost, body }, context) => {
+        const addedPost = await Post.create({
+          titlePost,
           user: context.user._id,
           body,
         });
         await User.findOneAndUpdate(
-          // { _id: context.user._id },
           {_id: "65ef5bca1cfc09f7bd371739" },
-          { $addToSet: { achievements: addedAchievement._id } }
+          { $addToSet: { posts: addedPost._id } }
         );
-        return addedAchievement;
-      // }
-      // throw AuthenticationError;
+        return addedPost;
     },
-    addComment: async (_, { achievementId, commentBody, username }, context) => {
+    removePost: async (_, { postId }, context) => {
       if (context.user) {
-        return Achievement.findOneAndUpdate(
-          { _id: achievementId },
-          {
-            $addToSet: {
-              comments: {
-                commentBody, 
-                username
-              }
-            },
-          },
-          {
-            new: true,
-            runValidators: true,
-          }
-        );
-      }
-      throw AuthenticationError;
-    },
-    removeAchievement: async (_, { achievementId }, context) => {
-      if (context.user) {
-        const Achievement = Achievement.findOneAndDelete({
-          _id: achievementId,
+        const Post = Post.findOneAndDelete({
+          _id: postId,
         });
         await User.findOneAndUpdate(
           {
             id: context.user._id,
           },
           {
-            $pull: { achievements: achievementId },
+            $pull: { posts: postId },
           }
         );
-        return Achievement;
+        return Post;
       }
       throw AuthenticationError;
     },
-    removeComment: async (_, { commentId, achievementId }, context) => {
+    updatePost: async (_, { postId, titlePost, postBody }, context) => {
       if (context.user) {
-        return Achievement.findOneAndUpdate(
-          { _id: achievementId },
-          {
-            $pull: {
-              comment: {
-                _id: commentId,
-              },
-            },
-          },
-          { new: true }
-        );
-      }
-      throw AuthenticationError;
-    },
-    addProfilePic: async (_, { profilePic }, context) => {
-      //if (context.user) {
-        return User.findOneAndUpdate(
-          //{ _id: context.user._id },
-          { _id: "65ef5bca1cfc09f7bd371734" },
-          { profilePic },
-          { new: true }
-        );
-      //}
-      //throw AuthenticationError;
-    },
-    addAchievementPhoto: async (_, { achievementId, url }, context) => {
-      //if (context.user) {
-        return Achievement.findOneAndUpdate(
-          { _id: achievementId },
-          { url },
-          { new: true }
-        );
-      //}
-      //throw AuthenticationError;
-    },  
-    updateAchievement: async (_, { achievementId, titleAchievement, achievementBody }, context) => {
-      if (context.user) {
-        return Achievement.findOneAndUpdate(
-          { _id: achievementId },
-          { titleAchievement, body: achievementBody },
+        return Post.findOneAndUpdate(
+          { _id: postId },
+          { titlePost, body: postBody },
           { new: true }
         )
       } 
@@ -169,47 +92,5 @@ const resolvers = {
     }
   },
 };
-
-// const { Profile } = require('../models');
-
-// const resolvers = {
-//   Query: {
-//     profiles: async () => {
-//       return Profile.find();
-//     },
-
-//     profile: async (parent, { profileId }) => {
-//       return Profile.findOne({ _id: profileId });
-//     },
-//   },
-
-//   Mutation: {
-//     addProfile: async (parent, { name }) => {
-//       return Profile.create({ name });
-//     },
-//     addSkill: async (parent, { profileId, skill }) => {
-//       return Profile.findOneAndUpdate(
-//         { _id: profileId },
-//         {
-//           $addToSet: { skills: skill },
-//         },
-//         {
-//           new: true,
-//           runValidators: true,
-//         }
-//       );
-//     },
-//     removeProfile: async (parent, { profileId }) => {
-//       return Profile.findOneAndDelete({ _id: profileId });
-//     },
-//     removeSkill: async (parent, { profileId, skill }) => {
-//       return Profile.findOneAndUpdate(
-//         { _id: profileId },
-//         { $pull: { skills: skill } },
-//         { new: true }
-//       );
-//     },
-//   },
-// };
 
 module.exports = resolvers;

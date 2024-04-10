@@ -2,7 +2,7 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 const { Schema, model } = require("mongoose");
-const { Achievement } = require("./Achievement");
+const { Achievement } = require("./Post.js");
 const validateEmail = function (email) {
   const re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   return re.test(email);
@@ -45,17 +45,6 @@ const userSchema = new Schema(
         ref: "Achievement",
       },
     ],
-    communities: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: "Community",
-      },
-    ],
-    comments: [commentSchema],
-    profilePic: {
-      type: String,
-      trim: true,
-    }
   },
   {
     toJSON: {

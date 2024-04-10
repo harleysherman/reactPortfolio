@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
 const db = require("../config/connection");
-const { User, Community, Achievement, Comment } = require("../models");
+const { User, Post, Comment } = require("../models");
 const userSeeds = require("./userSeeds.json");
 const achievementSeeds = require("./achievementSeeds.json");
 const communitySeeds = require("./communitySeeds.json");
@@ -15,19 +15,18 @@ db.once("open", async () => {
     // await cleanDB("Community", "communities");
     await User.deleteMany();
     await Achievement.deleteMany();
-    await Community.deleteMany();
 
     const users = await User.create(userSeeds);
-    const achievements = achievementSeeds.map((achievement) => ({
-      ...achievement, 
+    const posts = postSeeds.map((post) => ({
+      ...post, 
       user: users[Math.floor(Math.random() * (users.length - 1))]._id
     }))
 
-    const newAchievements = await Achievement.create(achievements);
+    const newPost = await Post.create(posts);
 
-    const filteredUsers = users.map( (user) => newAchievements
-      .filter((achievement) => achievement.user == user._id ? true : false)
-      .map((achievement) => achievement._id )
+    const filteredUsers = users.map( (user) => newPosts
+      .filter((post) => post.user == user._id ? true : false)
+      .map((post) => post._id )
     );
 
     console.log(filteredUsers);
