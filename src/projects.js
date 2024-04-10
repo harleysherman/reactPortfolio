@@ -54,13 +54,14 @@ const projectDev = [
       githubURL: "https://github.com/harleysherman/weatherAPI",
     },
     {
-      id: 6,
+      id: 6, 
       name: "WorkDayStarter",
       category: "JQuery/Local Storage",
       description: "The work day app is to help create a day planner for work. It uses local storage to store the events entered by the user. JQuery and Day.js is used in this project to run in the browser and dynamically update the HTML/CSS.",
       imageURL: workDayStarter,
       deployedURL: "https://harleysherman.github.io/workDayStarter/",
       githubURL: "https://github.com/harleysherman/workDayStarter",
+      // CHANGE TO HYPE ME HYPE YOU PROJECT
     },
   ];
 
