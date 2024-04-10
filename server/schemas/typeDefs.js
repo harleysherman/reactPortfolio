@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const typeDefs = `
 type User {
     _id: ID!
@@ -10,14 +11,7 @@ type User {
     profilePic: String
   }
 
-type Community {
-    _id: ID!
-    category: String!
-    users: [User]
-  }
-
-
-type Achievement {
+type Post {
     _id: ID!
     titleAchievement: String!
     body: String!
@@ -27,13 +21,6 @@ type Achievement {
     url: String
   }
 
-type Comment{
-    _id: ID
-    commentBody: String!
-    username: String
-    createdAt: String
-  }
-
   type Auth {
     token: ID
     user: User
@@ -41,24 +28,18 @@ type Comment{
 
   type Query{
     users: [User] 
-    communities: [Community]
-    achievements: [Achievement]
+    posts: [Post]
     user(username: String!): User
-    achievement(achievementId: ID!): Achievement
+    post(postId: ID!): Post
     me: User
   }
 
   type Mutation{
     addUser(username: String!, email: String!, password: String!, profilePic: String): Auth
     login(email: String!, password: String!): Auth
-    addCommunity(category: String!): Community
-    addAchievement(titleAchievement: String!, body: String!, url: String): Achievement
-    addComment(achievementId: ID!, commentBody: String!, username: String!): Achievement
-    removeAchievement(achievementId: ID!): Achievement
-    removeComment(commentId: ID, achievementId: ID): Achievement
-    addProfilePic(profilePic: String): User
-    addAchievementPhoto(achievementId: ID!, url: String): Achievement
-    updateAchievement(achievementId: ID!, titleAchievement: String, achievementBody: String): Achievement
+    addPost(titlePost: String!, body: String!, url: String): Post
+    removePost(postId: ID!): Post
+    updatePost(postId: ID!, titlePost: String, postBody: String): Post
   }
 `;
 

@@ -10,11 +10,8 @@ const cleanDB = require("./cleanDB");
 
 db.once("open", async () => {
   try {
-    // await cleanDB("User", "users");
-    // await cleanDB("Achievement", "achievements");
-    // await cleanDB("Community", "communities");
     await User.deleteMany();
-    await Achievement.deleteMany();
+    await Post.deleteMany();
 
     const users = await User.create(userSeeds);
     const posts = postSeeds.map((post) => ({
@@ -33,14 +30,9 @@ db.once("open", async () => {
 
     for (let i = 0; i < users.length; i++) {
       const user = users[i];
-      await User.findOneAndUpdate({_id: user._id}, { achievements: filteredUsers[i]}, { new: true })
+      await User.findOneAndUpdate({_id: user._id}, { posts: filteredUsers[i]}, { new: true })
     }
-    
-    // console.log("noeEmpties ---------------> ", noEmpties);
 
-    await Community.create(communitySeeds);
-
-    // console.log("all done!");
     process.exit(0);
   } catch (err) {
     throw err;
