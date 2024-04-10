@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const addDateSuffix = (date) => {
   let dateStr = date.toString();
 

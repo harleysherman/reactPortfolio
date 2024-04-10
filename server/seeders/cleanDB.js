@@ -1,3 +1,6 @@
+/* eslint-disable no-useless-catch */
+/* eslint-disable no-undef */
+// eslint-disable-next-line no-undef
 const models = require('../models');
 const db = require('../config/connection');
 

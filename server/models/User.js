@@ -1,3 +1,6 @@
+/* eslint-disable no-useless-escape */
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 const { Schema, model } = require("mongoose");
 const { Achievement } = require("./Achievement");
 const validateEmail = function (email) {

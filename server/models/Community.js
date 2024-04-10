@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const { Schema, model } = require('mongoose');
 
 const communitySchema = new Schema({

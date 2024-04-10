@@ -1,3 +1,6 @@
+/* eslint-disable no-useless-catch */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
 const db = require("../config/connection");
 const { User, Community, Achievement, Comment } = require("../models");
 const userSeeds = require("./userSeeds.json");

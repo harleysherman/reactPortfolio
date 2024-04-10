@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 // SCHEMA ONLY
 const { Schema, Types } = require("mongoose");
 
